@@ -8,6 +8,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         
     }
 
+    public void addNumber (String digito){
+        mov.setText(digito);
+    }
     
     
     
@@ -18,18 +21,26 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
         panel = new javax.swing.JPanel();
         mov = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
 
-        panel.setBackground(new java.awt.Color(102, 255, 102));
+        panel.setBackground(new java.awt.Color(204, 255, 255));
 
         mov.setFont(new java.awt.Font("Comic Sans MS", 0, 48)); // NOI18N
-        mov.setText("2");
+        mov.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mov.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 movMouseDragged(evt);
+            }
+        });
+
+        jButton1.setText("Presiona el Boton");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -38,16 +49,23 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
-                .addGap(248, 248, 248)
-                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(jButton1))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(318, Short.MAX_VALUE))
+                .addGap(71, 71, 71)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -69,6 +87,14 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         mov.setLocation(mov.getLocation().x+evt.getX()- mov.getWidth()/2,mov.getLocation().y+evt.getY()- mov.getHeight());
           
     }//GEN-LAST:event_movMouseDragged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+    int aleatorio=0;
+    aleatorio= (int)(Math.random()*100);       
+        
+     addNumber(""+aleatorio);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     public static void main(String args[]) {
@@ -104,6 +130,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel mov;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
