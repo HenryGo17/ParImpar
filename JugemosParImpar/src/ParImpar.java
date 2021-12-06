@@ -9,6 +9,7 @@ public class ParImpar {
      Scanner teclado=new Scanner (System.in);
      numero = teclado.nextInt();
      
+    
      if (numero % 2 == 0){
          System.out.println("Es Par");
      }
@@ -16,5 +17,5 @@ public class ParImpar {
          System.out.println("Es Impar");
      }
  }
-    
+   
 }

@@ -24,7 +24,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
         panel = new javax.swing.JPanel();
         mov = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        numAzar = new javax.swing.JButton();
         numPar = new javax.swing.JButton();
         numImpar = new javax.swing.JButton();
         Resultado = new javax.swing.JLabel();
@@ -43,10 +43,10 @@ public class VentanaJuego1 extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Presiona el Boton");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        numAzar.setText("Presiona el Boton");
+        numAzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                numAzarActionPerformed(evt);
             }
         });
 
@@ -72,23 +72,23 @@ public class VentanaJuego1 extends javax.swing.JFrame {
             .addGroup(panelLayout.createSequentialGroup()
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(panelLayout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(238, 238, 238)
+                        .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(234, 234, 234)
-                        .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(262, Short.MAX_VALUE))
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numAzar)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(141, 141, 141)
+                                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(83, 83, 83)
+                .addComponent(numAzar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -122,15 +122,15 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     
 
     //Codigo para ingresar un número al azar cuando se presione el boton 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void numAzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numAzarActionPerformed
         
     int aleatorio=0;
     aleatorio= (int)(Math.random()*100);       
         
-     addNumber(""+aleatorio);
+    addNumber(""+aleatorio);
      
      
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_numAzarActionPerformed
 
     
     //Codigo boton Par, validara si el número es par
@@ -182,8 +182,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Resultado;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel mov;
+    private javax.swing.JButton numAzar;
     private javax.swing.JButton numImpar;
     private javax.swing.JButton numPar;
     private javax.swing.JPanel panel;
