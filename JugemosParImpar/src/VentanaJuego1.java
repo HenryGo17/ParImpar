@@ -135,15 +135,16 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     
     //Codigo boton Par, validara si el número es par
     private void numParActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numParActionPerformed
+     
      int numero;
-     Scanner aleatorio=new Scanner (System.in);
-     numero = aleatorio.nextInt();
+     numero = Integer.parseInt(mov.getText());
+     
      
      if (numero % 2 == 0){
-         System.out.println("Es Par");
+         System.out.println("Correcto");
      }
      else {
-         System.out.println("Es Impar");
+         System.out.println("Incorrecto");
      }
     }//GEN-LAST:event_numParActionPerformed
 
