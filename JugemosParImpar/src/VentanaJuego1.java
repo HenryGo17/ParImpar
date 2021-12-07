@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 // Ventana para desarrollo del juego
 public class VentanaJuego1 extends javax.swing.JFrame {
@@ -141,10 +142,10 @@ public class VentanaJuego1 extends javax.swing.JFrame {
      
      
      if (numero % 2 == 0){
-         System.out.println("Correcto");
+      JOptionPane.showMessageDialog(null,"   Correcto  ");
      }
      else {
-         System.out.println("Incorrecto");
+         JOptionPane.showMessageDialog(null,"   Incorrecto  ");
      }
     }//GEN-LAST:event_numParActionPerformed
 
