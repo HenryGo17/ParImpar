@@ -59,6 +59,11 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         });
 
         numImpar.setText("Es Impar?");
+        numImpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numImparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
@@ -148,6 +153,20 @@ public class VentanaJuego1 extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(null,"   Incorrecto  ");
      }
     }//GEN-LAST:event_numParActionPerformed
+
+    private void numImparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numImparActionPerformed
+        
+        int numero;
+        numero= Integer.parseInt(mov.getText());
+        
+        if (numero % 2 ==0){
+            JOptionPane.showMessageDialog(null,"  Incorrecto  ");
+           
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"   Correcto  ");
+        }
+    }//GEN-LAST:event_numImparActionPerformed
 
     
     public static void main(String args[]) {
