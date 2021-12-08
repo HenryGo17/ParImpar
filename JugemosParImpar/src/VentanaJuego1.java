@@ -31,7 +31,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         Resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(500, 250));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setLocation(new java.awt.Point(650, 250));
         setResizable(false);
 
         panel.setBackground(new java.awt.Color(204, 255, 255));
@@ -44,13 +45,17 @@ public class VentanaJuego1 extends javax.swing.JFrame {
             }
         });
 
+        numAzar.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         numAzar.setText("Presiona el Boton");
+        numAzar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         numAzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numAzarActionPerformed(evt);
             }
         });
 
+        numPar.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        numPar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boxempty.png"))); // NOI18N
         numPar.setText("Es Par?");
         numPar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +63,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
             }
         });
 
+        numImpar.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        numImpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boxempty.png"))); // NOI18N
         numImpar.setText("Es Impar?");
         numImpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,44 +72,39 @@ public class VentanaJuego1 extends javax.swing.JFrame {
             }
         });
 
+        Resultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo2.jpg"))); // NOI18N
+
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(numPar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(numImpar)
-                .addGap(85, 85, 85))
             .addGroup(panelLayout.createSequentialGroup()
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(238, 238, 238)
-                        .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(234, 234, 234)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numAzar)
-                            .addGroup(panelLayout.createSequentialGroup()
-                                .addGap(141, 141, 141)
-                                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addGap(234, 234, 234)
+                .addComponent(numAzar))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(numPar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addComponent(numImpar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(numAzar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(4, 4, 4)
                 .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numImpar)
-                    .addComponent(numPar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
+                .addGap(23, 23, 23)
+                .addComponent(numPar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(numImpar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
