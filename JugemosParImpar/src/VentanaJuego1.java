@@ -7,9 +7,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
        //Codigo para que la ventana Jframe se ejecute
     public VentanaJuego1() {
-        initComponents();
-        panel.setFocusable(true);
-        
+       
     }
     //Con este codigo permitimos que nuesto Label se le asigne un valor
     public void addNumber (String digito){
@@ -23,18 +21,16 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         mov = new javax.swing.JLabel();
         numAzar = new javax.swing.JButton();
         numPar = new javax.swing.JButton();
         numImpar = new javax.swing.JButton();
-        Resultado = new javax.swing.JLabel();
+        Imagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
-
-        panel.setBackground(new java.awt.Color(204, 255, 255));
+        getContentPane().setLayout(null);
 
         mov.setFont(new java.awt.Font("Comic Sans MS", 0, 48)); // NOI18N
         mov.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -43,6 +39,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                 movMouseDragged(evt);
             }
         });
+        getContentPane().add(mov);
+        mov.setBounds(240, 150, 110, 50);
 
         numAzar.setText("Presiona el Boton");
         numAzar.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +48,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                 numAzarActionPerformed(evt);
             }
         });
+        getContentPane().add(numAzar);
+        numAzar.setBounds(230, 100, 115, 23);
 
         numPar.setText("Es Par?");
         numPar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +57,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                 numParActionPerformed(evt);
             }
         });
+        getContentPane().add(numPar);
+        numPar.setBounds(120, 290, 67, 23);
 
         numImpar.setText("Es Impar?");
         numImpar.addActionListener(new java.awt.event.ActionListener() {
@@ -64,57 +66,12 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                 numImparActionPerformed(evt);
             }
         });
+        getContentPane().add(numImpar);
+        numImpar.setBounds(400, 290, 79, 23);
 
-        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
-        panel.setLayout(panelLayout);
-        panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(numPar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(numImpar)
-                .addGap(85, 85, 85))
-            .addGroup(panelLayout.createSequentialGroup()
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(238, 238, 238)
-                        .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(234, 234, 234)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numAzar)
-                            .addGroup(panelLayout.createSequentialGroup()
-                                .addGap(141, 141, 141)
-                                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(121, Short.MAX_VALUE))
-        );
-        panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelLayout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(numAzar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mov, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numImpar)
-                    .addComponent(numPar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo2.jpg"))); // NOI18N
+        getContentPane().add(Imagen);
+        Imagen.setBounds(0, 0, 960, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,11 +159,10 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Resultado;
+    private javax.swing.JLabel Imagen;
     private javax.swing.JLabel mov;
     private javax.swing.JButton numAzar;
     private javax.swing.JButton numImpar;
     private javax.swing.JButton numPar;
-    private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
