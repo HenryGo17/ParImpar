@@ -160,16 +160,18 @@ public class VentanaJuego1 extends javax.swing.JFrame {
      
      
      if (numero % 2 == 0){
-      JOptionPane.showMessageDialog(null,"   Correcto  ");
-      AudioClip Sonido;
+         AudioClip Sonido;
         Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Correcto.wav"));
         Sonido.play();
+      JOptionPane.showMessageDialog(null,"   Correcto  ");
+      
      }
      else {
-         JOptionPane.showMessageDialog(null,"   Incorrecto  ");
          AudioClip Sonido;
         Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Incorrecto.wav"));
         Sonido.play();
+         JOptionPane.showMessageDialog(null,"   Incorrecto  ");
+         
      }
     }//GEN-LAST:event_numParActionPerformed
 
@@ -179,16 +181,18 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         numero= Integer.parseInt(mov.getText());
         
         if (numero % 2 ==0){
-            JOptionPane.showMessageDialog(null,"  Incorrecto  ");
-           AudioClip Sonido;
+            AudioClip Sonido;
         Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Incorrecto.wav"));
         Sonido.play();
+            JOptionPane.showMessageDialog(null,"  Incorrecto  ");
+           
         }
         else {
-            JOptionPane.showMessageDialog(null,"   Correcto  ");
             AudioClip Sonido;
         Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Correcto.wav"));
         Sonido.play();
+            JOptionPane.showMessageDialog(null,"   Correcto  ");
+            
         }
     }//GEN-LAST:event_numImparActionPerformed
 
