@@ -1,9 +1,12 @@
 
+import java.applet.AudioClip;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 // Ventana para desarrollo del juego
 public class VentanaJuego1 extends javax.swing.JFrame {
+
+    private AudioClip Sonido;
 
        //Codigo para que la ventana Jframe se ejecute
     public VentanaJuego1() {
@@ -48,6 +51,11 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         numAzar.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         numAzar.setText("Presiona el Boton");
         numAzar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        numAzar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                numAzarMouseEntered(evt);
+            }
+        });
         numAzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numAzarActionPerformed(evt);
@@ -131,6 +139,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
     //Codigo para ingresar un número al azar cuando se presione el boton 
     private void numAzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numAzarActionPerformed
+      AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Presionar.wav"));
+        Sonido.play(); 
         
     int aleatorio=0;
     aleatorio= (int)(Math.random()*100);       
@@ -150,9 +161,15 @@ public class VentanaJuego1 extends javax.swing.JFrame {
      
      if (numero % 2 == 0){
       JOptionPane.showMessageDialog(null,"   Correcto  ");
+      AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Correcto.wav"));
+        Sonido.play();
      }
      else {
          JOptionPane.showMessageDialog(null,"   Incorrecto  ");
+         AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Incorrecto.wav"));
+        Sonido.play();
      }
     }//GEN-LAST:event_numParActionPerformed
 
@@ -163,12 +180,23 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         
         if (numero % 2 ==0){
             JOptionPane.showMessageDialog(null,"  Incorrecto  ");
-           
+           AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Incorrecto.wav"));
+        Sonido.play();
         }
         else {
             JOptionPane.showMessageDialog(null,"   Correcto  ");
+            AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Correcto.wav"));
+        Sonido.play();
         }
     }//GEN-LAST:event_numImparActionPerformed
+
+    private void numAzarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_numAzarMouseEntered
+        // TODO add your handling code here:AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Click.wav"));
+        Sonido.play();
+    }//GEN-LAST:event_numAzarMouseEntered
 
     
     public static void main(String args[]) {

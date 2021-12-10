@@ -36,6 +36,9 @@ public class Inicio extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InicioJuegoMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                InicioJuegoMouseEntered(evt);
+            }
         });
         InicioJuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +82,12 @@ public class Inicio extends javax.swing.JFrame {
         Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Presionar.wav"));
         Sonido.play();
     }//GEN-LAST:event_InicioJuegoActionPerformed
+
+    private void InicioJuegoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InicioJuegoMouseEntered
+        AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Click.wav"));
+        Sonido.play();
+    }//GEN-LAST:event_InicioJuegoMouseEntered
 
     
     public static void main(String args[]) {
