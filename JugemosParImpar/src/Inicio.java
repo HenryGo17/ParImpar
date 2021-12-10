@@ -1,4 +1,7 @@
 
+import java.applet.AudioClip;
+
+
 public class Inicio extends javax.swing.JFrame {
 
     /**
@@ -34,6 +37,11 @@ public class Inicio extends javax.swing.JFrame {
                 InicioJuegoMouseClicked(evt);
             }
         });
+        InicioJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InicioJuegoActionPerformed(evt);
+            }
+        });
         jPanel1.add(InicioJuego);
         InicioJuego.setBounds(230, 220, 210, 30);
 
@@ -65,6 +73,12 @@ public class Inicio extends javax.swing.JFrame {
         iniciar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_InicioJuegoMouseClicked
+
+    private void InicioJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioJuegoActionPerformed
+        AudioClip Sonido;
+        Sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Son/Presionar.wav"));
+        Sonido.play();
+    }//GEN-LAST:event_InicioJuegoActionPerformed
 
     
     public static void main(String args[]) {
